@@ -1,6 +1,23 @@
-const canvas = document.createElement("canvas");
-document.body.appendChild(canvas);
-const gl = canvas.getContext("webgl2");
+/*
+getActiveAttrib
+getActiveUniform
+getAttachedShaders
+getAttribLocation
+getBufferParameter
+getFrameBufferAttachment
+kUnmaskedRendererWebgl
+kUnmaskedVendorWebgl
+getProgramParameter
+getProgramInfoLog
+getRenderbufferParameter
+getShaderParameter
+getShaderInfoLog
+getShaderSource
+getTexParameter
+getUniform
+getUniformLocation
+getVertexAttrib
+*/
 
 const getObjectParameterValues = (gl, object) => {
   const results = {};
@@ -38,6 +55,7 @@ const getWebglFingerprint = (gl) => ({
   extensionParameters: getExtensionParameterValues(gl),
 });
 
+const canvas = document.createElement("canvas");
+document.body.appendChild(canvas);
+const gl = canvas.getContext("webgl2");
 console.log(getWebglFingerprint(gl));
-
-
